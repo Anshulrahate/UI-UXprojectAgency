@@ -436,27 +436,124 @@ body {
     transition: opacity 0.3s ease;
 }
 
-#page6{
+#page6 {
     width: 100%;
     min-height: 100vh;
     background-color: #111;
 
 
-    .page6_head{
-        padding: 5vw 5vw;
-     display: flex;
-     flex-direction: column;
-        h1{
-          font-size: 4em;
-          padding: 1vw 4vw;
-          text-transform: uppercase;
-          font-weight: 800;
+    .page6_head {
+        padding: 0vw 5vw;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            font-size: 4em;
+            padding: 4vw 4vw;
+            text-transform: uppercase;
+            font-weight: 800;
+
         }
-        p{
+
+        p {
             width: 80%;
-              font-size: 1.4em;
-          padding: 1vw 4vw;
-          font-weight: 400;
+            font-size: 1.4em;
+            padding: 4vw 4vw;
+            font-weight: 400;
         }
+    }
+
+
+    .page6_main {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .page6_main_div1 {
+            padding: 2vw 4vw;
+
+            &:hover {
+                border-top: 1px solid gray;
+            }
+
+            div {
+                border-top: 1px solid gray;
+
+                h1 {
+                    text-transform: uppercase;
+                    padding: 0.35rem;
+                    transition: all ease-in 0.4;
+
+                    &:hover {
+                        color: green;
+
+                    }
+                }
+            }
+
+        }
+
+
+        .page6_main_div2,
+.page6_main_div3 {
+    width: 100%;
+    padding: 1vw 2vw;
+
+    &:hover {
+        border-top: 1px solid gray;
+    }
+
+    .vertical_card {
+        padding: 1vw;
+
+        h1 {
+            font-size: 2em;
+            font-weight: 700;
+            line-height: 1em;
+        }
+
+        p {
+            margin: 2vw 0;
+            color: #333;
+            font-weight: 300;
+            font-size: 1.1em;
+        }
+
+        div {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+
+            img,
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: opacity 0.4s ease;
+                pointer-events: none;
+            }
+
+        }
+    }
+
+    .vertical_card {
+  overflow: hidden;
+}
+
+.gsap_view {
+  will-change: transform;
+}
+}
+
+        
     }
 }

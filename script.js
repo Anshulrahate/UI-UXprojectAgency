@@ -85,3 +85,62 @@ sections.forEach(function(elem) {
   });
 });
 
+
+
+document.querySelectorAll(".vertical_card").forEach(card => {
+  const view = card.querySelector(".gsap_view");
+  const video = view.querySelector("video");
+  const text = card.querySelector("p");
+
+  // initial states
+  gsap.set(video, { opacity: 0 });
+  gsap.set(view, { scale: 1, y: 0, transformOrigin: "center bottom" });
+  gsap.set(text, { opacity: 1 });
+
+  view.addEventListener("mouseenter", () => {
+    gsap.to(view, {
+      scale: 1.1,
+      y: -40,                 // 🔥 moves upward
+      duration: 0.6,
+      ease: "power3.out"
+    });
+
+    gsap.to(video, {
+      opacity: 1,
+      duration: 0.4,
+      ease: "power2.out",
+      onStart: () => video.play()
+    });
+
+    gsap.to(text, {
+      opacity: 0,
+      duration: 0.3,
+      ease: "power2.out"
+    });
+  });
+
+  view.addEventListener("mouseleave", () => {
+    gsap.to(view, {
+      scale: 1,
+      y: 0,
+      duration: 0.5,
+      ease: "power3.out"
+    });
+
+    gsap.to(video, {
+      opacity: 0,
+      duration: 0.3,
+      ease: "power2.out",
+      onComplete: () => {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+
+    gsap.to(text, {
+      opacity: 1,
+      duration: 0.3,
+      ease: "power2.out"
+    });
+  });
+});

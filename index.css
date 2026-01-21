@@ -387,19 +387,101 @@ body {
   background-color: #111;
 }
 #page6 .page6_head {
-  padding: 5vw 5vw;
+  padding: 0vw 5vw;
+  position: relative;
   display: flex;
   flex-direction: column;
 }
 #page6 .page6_head h1 {
   font-size: 4em;
-  padding: 1vw 4vw;
+  padding: 4vw 4vw;
   text-transform: uppercase;
   font-weight: 800;
 }
 #page6 .page6_head p {
   width: 80%;
   font-size: 1.4em;
-  padding: 1vw 4vw;
+  padding: 4vw 4vw;
   font-weight: 400;
+}
+#page6 .page6_main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+#page6 .page6_main .page6_main_div1 {
+  padding: 2vw 4vw;
+}
+#page6 .page6_main .page6_main_div1:hover {
+  border-top: 1px solid gray;
+}
+#page6 .page6_main .page6_main_div1 div {
+  border-top: 1px solid gray;
+}
+#page6 .page6_main .page6_main_div1 div h1 {
+  text-transform: uppercase;
+  padding: 0.35rem;
+  transition: all ease-in 0.4;
+}
+#page6 .page6_main .page6_main_div1 div h1:hover {
+  color: green;
+}
+#page6 .page6_main .page6_main_div2,
+#page6 .page6_main .page6_main_div3 {
+  width: 100%;
+  padding: 1vw 2vw;
+}
+#page6 .page6_main .page6_main_div2:hover,
+#page6 .page6_main .page6_main_div3:hover {
+  border-top: 1px solid gray;
+}
+#page6 .page6_main .page6_main_div2 .vertical_card,
+#page6 .page6_main .page6_main_div3 .vertical_card {
+  padding: 1vw;
+}
+#page6 .page6_main .page6_main_div2 .vertical_card h1,
+#page6 .page6_main .page6_main_div3 .vertical_card h1 {
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1em;
+}
+#page6 .page6_main .page6_main_div2 .vertical_card p,
+#page6 .page6_main .page6_main_div3 .vertical_card p {
+  margin: 2vw 0;
+  color: #333;
+  font-weight: 300;
+  font-size: 1.1em;
+}
+#page6 .page6_main .page6_main_div2 .vertical_card div,
+#page6 .page6_main .page6_main_div3 .vertical_card div {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+#page6 .page6_main .page6_main_div2 .vertical_card div img,
+#page6 .page6_main .page6_main_div2 .vertical_card div video,
+#page6 .page6_main .page6_main_div3 .vertical_card div img,
+#page6 .page6_main .page6_main_div3 .vertical_card div video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+#page6 .page6_main .page6_main_div2 .vertical_card div video,
+#page6 .page6_main .page6_main_div3 .vertical_card div video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+#page6 .page6_main .page6_main_div2 .vertical_card,
+#page6 .page6_main .page6_main_div3 .vertical_card {
+  overflow: hidden;
+}
+#page6 .page6_main .page6_main_div2 .gsap_view,
+#page6 .page6_main .page6_main_div3 .gsap_view {
+  will-change: transform;
 }/*# sourceMappingURL=index.css.map */
