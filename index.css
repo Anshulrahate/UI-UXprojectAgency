@@ -318,4 +318,88 @@ body {
   width: 400px;
   height: auto;
   padding: 1rem;
+  margin-bottom: 4vw;
+}
+
+#page5 {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2vw 4vw;
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4vw;
+}
+
+.section {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 4vw;
+}
+
+#page5 .sec-page5-left {
+  height: 100%;
+  width: 30%;
+  padding: 4vw 3vw;
+}
+#page5 .sec-page5-left h3 {
+  margin: 0 0 3vw 0;
+  padding: 0vw 1vw;
+}
+#page5 .sec-page5-left p {
+  color: #333;
+  font-weight: 300;
+}
+
+#page5 .sec-page5-right {
+  height: 100%;
+  width: 60%;
+  background-color: rgb(64, 71, 71);
+  position: relative;
+}
+
+#page5 .sec-page5-right img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#page5 .sec-page5-right video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#page6 {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #111;
+}
+#page6 .page6_head {
+  padding: 5vw 5vw;
+  display: flex;
+  flex-direction: column;
+}
+#page6 .page6_head h1 {
+  font-size: 4em;
+  padding: 1vw 4vw;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+#page6 .page6_head p {
+  width: 80%;
+  font-size: 1.4em;
+  padding: 1vw 4vw;
+  font-weight: 400;
 }/*# sourceMappingURL=index.css.map */
